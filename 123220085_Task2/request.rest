@@ -1,0 +1,24 @@
+GET http://localhost:3000/notes
+
+###
+POST http://localhost:3000/add-notes
+Content-Type: application/json
+
+{
+    "title": "#5",
+    "category": "TCC",
+    "note": "tes add data"
+}
+
+###
+PUT http://localhost:3000/edit-notes/10
+Content-Type: application/json
+
+{
+    "title": "#5",
+    "category": "TCC Praktikum",
+    "note": "kali ini edit data"
+}
+
+###
+DELETE http://localhost:3000/delete-notes/9
