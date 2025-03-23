@@ -32,6 +32,8 @@
     </div>
 
     <script>
+        const BASE_URL = "https://notes-be-1013759214686.us-central1.run.app"; // Ganti dengan URL yang benar
+
         document.getElementById("addForm").addEventListener("submit", async function (event) {
             event.preventDefault();
 
@@ -40,7 +42,7 @@
             const note = document.getElementById("note").value; 
 
             try {
-                const response = await fetch("http://localhost:3000/add-notes", {
+                const response = await fetch(`${BASE_URL}/add-notes`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
